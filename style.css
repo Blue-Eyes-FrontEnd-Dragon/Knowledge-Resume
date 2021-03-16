@@ -55,20 +55,31 @@ h1 {
 #timeline ul li div {
     position: relative;
     bottom: 0;
-    width: 40rem;
+    width: 30rem;
     padding: 1rem;
     background: var(--secondary-color);
     transition: all 0.5s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
 }
 
 /* Right Side */
 #timeline ul li:nth-child(odd) div {
     left: 4rem;
+    transform: translateX(20rem);
 }
 
 /* Left Side */
 #timeline ul li:nth-child(even) div {
-    right: 43rem;
+    right: 33rem;
+    transform: translateX(-20rem);
+}
+
+/* Show Boxes */
+#timeline ul li.show div {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
 }
 
 /* Dots */
